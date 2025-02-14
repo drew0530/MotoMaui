@@ -1,0 +1,82 @@
+﻿[
+        {
+            "Name": "AGV K1 Helmet",
+            "Type": "Helmet",
+            "Brand": "AGV",
+            "Price": "$299",
+            "Description": "Lightweight and aerodynamic full-face helmet with integrated ventilation.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Sena 20S Evo",
+            "Type": "Bluetooth Communication System",
+            "Brand": "Sena",
+            "Price": "$249",
+            "Description": "Bluetooth headset for motorcycle helmets with intercom and music sharing.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Oxford Premium Rain Seal Cover",
+            "Type": "Motorcycle Cover",
+            "Brand": "Oxford",
+            "Price": "$89",
+            "Description": "Waterproof and UV-resistant cover for all weather conditions.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Garmin Zumo XT",
+            "Type": "GPS Navigator",
+            "Brand": "Garmin",
+            "Price": "$399",
+            "Description": "Rugged motorcycle GPS with a 5.5-inch display and preloaded maps.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Alpinestars SMX-6 V2 Boots",
+            "Type": "Riding Boots",
+            "Brand": "Alpinestars",
+            "Price": "$249",
+            "Description": "High-performance boots with ankle protection and a lightweight design.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Cortech Super 2.0 Saddlebags",
+            "Type": "Saddlebags",
+            "Brand": "Cortech",
+            "Price": "$179",
+            "Description": "Durable and weather-resistant saddlebags with a 24-liter capacity.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "BikeMaster Heated Grips",
+            "Type": "Heated Grips",
+            "Brand": "BikeMaster",
+            "Price": "$99",
+            "Description": "Heated grips with adjustable temperature settings for cold weather riding.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "RAM Mounts X-Grip Phone Holder",
+            "Type": "Phone Mount",
+            "Brand": "RAM Mounts",
+            "Price": "$49",
+            "Description": "Secure phone mount with a rubberized X-Grip for all phone sizes.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Icon Stormhawk Gloves",
+            "Type": "Riding Gloves",
+            "Brand": "Icon",
+            "Price": "$79",
+            "Description": "Waterproof and insulated gloves for cold and wet conditions.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        },
+        {
+            "Name": "Kuryakyn GranTour ISO Grips",
+            "Type": "Handlebar Grips",
+            "Brand": "Kuryakyn",
+            "Price": "$69",
+            "Description": "Ergonomic and vibration-dampening grips for long rides.",
+            "Image": "REPLACE_WITH_DIRECT_IMAGE_URL"
+        }
+    ]

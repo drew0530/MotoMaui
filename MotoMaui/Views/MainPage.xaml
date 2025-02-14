@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MotoMaui.Views.MainPage"
+             xmlns:model="clr-namespace:MotoMaui.Models"
+             xmlns:viewmodel="clr-namespace:MotoMaui.ViewModels"
+             x:DataType="viewmodel:MainViewModel"
+             Title="MotoMaui"
+             x:Name="Main"
+             Shell.NavBarIsVisible="false">
+    <ContentPage.Behaviors>
+        <toolkit:EventToCommandBehavior EventName="Appearing" 
+                                        BindingContext="{Binding Path=BindingContext, Source={x:Reference Main}, x:DataType=ContentPage}" 
+                                        Command="{Binding AppearingCommand}"/>
+    </ContentPage.Behaviors>
+    <Grid RowDefinitions="Auto, *">
+        <StackLayout
+            Grid.Row="0"
+            Margin="10, 0"
+            HorizontalOptions="FillAndExpand"
+            IsVisible="{Binding IsNotBusy}"
+            Orientation="Horizontal">
+            <Border
+                Margin="0"
+                Padding="0"
+                Background="Transparent"
+                HorizontalOptions="FillAndExpand"
+                StrokeShape="RoundRectangle 22"
+                StrokeThickness="1">
+                <StackLayout
+                    Margin="12,2"
+                    Orientation="Horizontal"
+                    VerticalOptions="CenterAndExpand">
+                    <Label
+                        FontFamily="MaterialIcon"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="&#xf349;"
+                        VerticalOptions="CenterAndExpand" />
+                    <Entry
+                        Margin="8,0"
+                        FontSize="12"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Search" />
+                </StackLayout>
+            </Border>
+        </StackLayout>
+        <Grid Grid.Row="1">
+            <RefreshView
+            Grid.ColumnSpan="2">
+            <ContentView>
+                <CollectionView ItemsSource="{Binding Motorcycles}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Motorcycle">
+                            <Grid Padding="10">
+                                <Border HeightRequest="125"
+                                        StrokeShape="RoundRectangle 20,20,20,20">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=GoToDetailsCommand}"
+                                            CommandParameter="{Binding .}"/>
+                                    </Border.GestureRecognizers>
+                                    <Grid Padding="0"
+                                            ColumnDefinitions="125,*">
+                                        <Image
+                                            
+                                            Aspect="AspectFill"
+                                            HeightRequest="125"
+                                            Source="{Binding Image}"
+                                            WidthRequest="125"/>
+                                        <VerticalStackLayout
+                                            Grid.Column="1"
+                                            VerticalOptions="Center"
+                                            Padding="10">
+                                            <Label Style="{StaticResource LargeLabel}"
+                                                   Text="{Binding Brand}"/>
+                                            <Label Style="{StaticResource MediumLabel}"
+                                                   Text="{Binding Model}"/>
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ContentView>
+        </RefreshView>
+        </Grid>
+    </Grid>
+</ContentPage>

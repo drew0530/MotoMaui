@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MotoMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MotoMaui"
+    xmlns:view="clr-namespace:MotoMaui.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MotoMaui">
+
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="MotoMaui"
+        ContentTemplate="{DataTemplate view:MainPage}"
+        Route="main" />
+
+</Shell>
